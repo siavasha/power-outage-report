@@ -120,6 +120,12 @@ Impact and duration patterns across different climate zones:
 ![Effect of Median Imputation on OUTAGE.DURATION.HOURS](images/impute_duration.png)
 *Caption: Median imputation for `OUTAGE.DURATION.HOURS` (3.8% imputed) had minimal impact on the distribution due to the small percentage of missing values.*
 
+![Effect of Median Imputation on TOTAL.SALES](images/impute_total_sales.png)
+*Caption: Median imputation for `TOTAL.SALES` (1.4% imputed) shows little visible change in the distribution, as expected with a low percentage of missing data.*
+
+![Effect of Geographic-Based Imputation on CLIMATE.CATEGORY](images/impute_climate_category.png)
+*Caption: Imputing `CLIMATE.CATEGORY` (0.6% imputed) based on location slightly increased the counts of the most common categories ('normal', 'cold') but didn't drastically alter the overall distribution.*
+
 ---
 
 ## Step 3: Framing a Prediction Problem
