@@ -1,8 +1,7 @@
 # Analyzing U.S. Power Outages (2000-2016): Patterns, Impacts, and Insights
 
-**Name(s)**: Siavash Azar
+**Author**: Siavash Azar
 
-**Website Link**: https://siavasha.github.io/power-outage-report/
 
 ---
 
@@ -64,6 +63,54 @@ The dataset required several preprocessing steps:
 
 ![Customers Affected by Climate Region](images/box_customers_by_region.png)
 *Caption: The distribution of customers affected varies significantly across different climate regions. Regions like the Northeast and Southeast tend to have outages affecting larger numbers of customers, potentially due to population density and weather patterns.*
+
+#### Interesting Aggregates
+
+To further understand patterns in the data, I explored several aggregated views:
+
+**1. Mean Customers Affected by Cause Category and Year**
+
+This table reveals how the impact of different types of outages has changed over time:
+
+| Cause Category | 2000-2005 | 2006-2010 | 2011-2016 | Overall Average |
+|----------------|-----------|-----------|-----------|-----------------|
+| Severe weather | 178,717   | 165,842   | 160,318   | 166,285         |
+| Intentional attack | 0     | 3,412     | 105,641   | 63,139          |
+| System operability | 420,834| 117,250   | 55,371    | 129,518         |
+| Islanding      | N/A       | 100,254   | 104,200   | 102,364         |
+| Equipment failure | 94,500  | 112,575   | 65,514    | 89,724          |
+| Public appeal  | 0         | 81,433    | 121,286   | 104,835         |
+| Fuel supply emergency | N/A  | 295,242  | 0.5       | 147,621         |
+
+*Key insights: Severe weather consistently causes the most widespread outages, while intentional attacks have increased dramatically in their customer impact over time. System operability disruptions have become less impactful in recent years, suggesting improvements in grid management.*
+
+**2. Number of Outages by State and Cause Category**
+
+States with the highest frequency of outages:
+
+| State      | Severe Weather | Intentional Attack | System Operability | Equipment Failure | Total |
+|------------|----------------|-------------------|-------------------|------------------|-------|
+| California | 70             | 24                | 41                | 21               | 210   |
+| Michigan   | 83             | 4                 | 3                 | 3                | 95    |
+| Texas      | 65             | 16                | 20                | 0                | 109   |
+| Pennsylvania | 48           | 6                 | 2                 | 0                | 58    |
+| New York   | 33             | 19                | 7                 | 0                | 59    |
+| Maryland   | 32             | 25                | 1                 | 0                | 58    |
+| Virginia   | 32             | 7                 | 1                 | 0                | 40    |
+
+*Key insights: California experiences the most diverse range of outage causes, while Michigan has a particularly high frequency of severe weather-related outages. States like Maryland show a high proportion of intentional attacks relative to their total outages.*
+
+**3. Summary Statistics by Climate Category**
+
+Impact and duration patterns across different climate zones:
+
+| Climate Category | Mean Customers Affected | Median Customers Affected | Mean Duration (hrs) | Median Duration (hrs) |
+|------------------|-------------------------|---------------------------|---------------------|----------------------|
+| Cold             | 126,840                 | 71,500                    | 44.3                | 13.6                 |
+| Normal           | 153,183                 | 70,000                    | 42.2                | 9.4                  |
+| Warm             | 146,844                 | 73,000                    | 47.0                | 14.7                 |
+
+*Key insights: While "normal" climate regions experience outages affecting slightly more customers on average, "warm" climate areas tend to have longer-lasting outages. This may relate to infrastructure differences or the nature of weather events in different climate zones.*
 
 #### Imputation Effects
 
