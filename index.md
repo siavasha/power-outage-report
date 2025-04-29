@@ -189,8 +189,6 @@ The final model aimed to improve upon the baseline by incorporating more feature
 ![Final Model: Predicted vs Actual (Log Scale)](images/final_pred_vs_actual.png)
 *Caption: The final model's predictions (log scale) show a much better alignment with the actual values compared to the baseline, although variance still exists.*
 
-*(Note: Feature importance plot for the final model was complex due to the pipeline structure in the notebook. Consider adding a screenshot or simplified version if desired).*
-
 **Interpretation:** The Random Forest model significantly outperformed the baseline. The R² score is now positive (0.26), explaining about 26% of the variance in the log-transformed target. The RMSE on the original scale decreased by approximately 16%, indicating a substantial reduction in prediction error. While there's still room for improvement, the feature engineering, expanded feature set, and more complex algorithm clearly led to a more effective model.
 
 ---
